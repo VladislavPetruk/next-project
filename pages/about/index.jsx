@@ -2,7 +2,7 @@ import Image from "next/image";
 import React from "react";
 import Container from "../../components/Container";
 import Title from "../../components/Title";
-import Img from "/public/me.jpg";
+import Img from "/public/me-bg.png";
 
 const about = () => {
   return (

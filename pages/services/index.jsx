@@ -33,7 +33,7 @@ const services = [
   }
 ]
 
-const Services = (theme) => {
+const Services = () => {
   return (
     <section>
       <Container>

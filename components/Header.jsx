@@ -4,8 +4,8 @@ import Link from "next/link";
 const Header = () => {
   return (
     <header className="w-full">
-      <div className="container flex items-center justify-between">
-        <div className="w-[200px]">
+      <div className="container flex items-center justify-center md:justify-between">
+        <div className="w-40 md:w-52">
           <Link href="/">
             <a>
               <svg
