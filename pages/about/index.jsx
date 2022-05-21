@@ -10,7 +10,7 @@ const about = () => {
       <Container>
         <Title text="About me" smallText="who i am" />
         <div className="flex flex-col items-center justify-between md:flex-row gap-14">
-          <div className="min-w-[400px]">
+          <div className="md:min-w-[400px] w-full text-center">
             <Image src={Img} alt="Vladyslav Petruk" width={400} height={400} />
           </div>
           <div className="text-xl tracking-wide">

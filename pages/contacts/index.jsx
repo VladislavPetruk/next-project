@@ -45,7 +45,7 @@ const media = [
 const Contacts = () => {
   const { isLoaded } = useJsApiLoader({
     id: "google-map-script",
-    googleMapsApiKey: "AIzaSyAcRImks-c16L33c-EfoGijTr_QaKyW56k",
+    googleMapsApiKey: "AIzaSyD_78qhKYVvK0L9UZc5mp5F8LeW3yhQl1k",
   });
 
   const [map, setMap] = React.useState(null);

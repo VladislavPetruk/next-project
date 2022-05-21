@@ -40,7 +40,7 @@ const Skills = () => {
     <section>
       <Container>
         <Title text="My skills" smallText="what i know"></Title>
-        <div className="grid items-center grid-cols-2 gap-14">
+        <div className="grid items-center md:grid-cols-2 gap-14">
           <div className="text-xl tracking-wide">
             <p>
               While working on projects, I had to work effectively with large
