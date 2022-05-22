@@ -1,55 +1,69 @@
-import React from 'react'
-import Container from '../../components/Container'
-import Title from '../../components/Title'
-import {BiCodeAlt} from 'react-icons/bi'
-import {GiProgression} from 'react-icons/gi'
-import {GrWordpress, GrReactjs} from 'react-icons/gr'
-
+import React from "react";
+import Container from "../../components/Container";
+import Title from "../../components/Title";
+import { BiCodeAlt } from "react-icons/bi";
+import { GiProgression } from "react-icons/gi";
+import { GrWordpress, GrReactjs } from "react-icons/gr";
+import Head from "next/head";
 
 const services = [
   {
-    "id": "1",
-    "service": "Web Development",
-    "description": "Responsive websites built for an optimal user experience that achieves your business goals.",
-    "icon": <BiCodeAlt className='m-auto text-6xl text-main-color' />,
+    id: "1",
+    service: "Web Development",
+    description:
+      "Responsive websites built for an optimal user experience that achieves your business goals.",
+    icon: <BiCodeAlt className="m-auto text-6xl text-main-color" />,
   },
   {
-    "id": "2",
-    "service": "Performance & SEO",
-    "description": "Make your website fast, easy to find, and reach the widest audience possible.",
-    "icon": <GiProgression className='m-auto text-6xl text-main-color' />,
+    id: "2",
+    service: "Performance & SEO",
+    description:
+      "Make your website fast, easy to find, and reach the widest audience possible.",
+    icon: <GiProgression className="m-auto text-6xl text-main-color" />,
   },
   {
-    "id": "3",
-    "service": "WordPress",
-    "description": "Manage your website using the web's most popular content management system.",
-    "icon": <GrWordpress className='m-auto text-6xl text-main-color' />,
+    id: "3",
+    service: "WordPress",
+    description:
+      "Manage your website using the web's most popular content management system.",
+    icon: <GrWordpress className="m-auto text-6xl text-main-color" />,
   },
   {
-    "id": "4",
-    "service": "React",
-    "description": "Responsive websites designed to optimize user experience and achieve your business goals using the latest development technologies, including React.",
-    "icon": <GrReactjs className='m-auto text-6xl text-main-color' />,
-  }
-]
+    id: "4",
+    service: "React",
+    description:
+      "Responsive websites designed to optimize user experience and achieve your business goals using the latest development technologies, including React.",
+    icon: <GrReactjs className="m-auto text-6xl text-main-color" />,
+  },
+];
 
 const Services = () => {
   return (
     <section>
+      <Head>
+        <title>Services</title>
+        <meta name="description" content="Vladyslav's Services" />
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta itemProp="name" content="Services" />
+        <meta itemProp="description" content="Vladyslav's Services" />
+      </Head>
       <Container>
         <Title text="My services" smallText="what i provide" />
-        <div className='grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3'>
-          {services.map(({service, description, icon, id}) => (
-            <div className='p-5 text-center rounded-xl border-black/[.2] dark:border-white/[.2] dark:bg-slate-900/[.1] shadow-xl border-solid-1 border bg-red dark:shadow-[0_20px_25px_-5px_rgba(255,255,255,0.3)]' key={id}>
+        <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3">
+          {services.map(({ service, description, icon, id }) => (
+            <div
+              className="p-5 text-center rounded-xl border-black/[.2] dark:border-white/[.2] dark:bg-slate-900/[.1] shadow-xl border-solid-1 border bg-red dark:shadow-[0_20px_25px_-5px_rgba(255,255,255,0.3)]"
+              key={id}
+            >
               {icon}
-              <div className='mt-3 mb-4 text-3xl'>{service}</div>
+              <div className="mt-3 mb-4 text-3xl">{service}</div>
               <p className="text-xl">{description}</p>
             </div>
           ))}
         </div>
       </Container>
     </section>
-  )
-}
+  );
+};
 
-export default Services
+export default Services;

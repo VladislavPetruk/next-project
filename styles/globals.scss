@@ -2,38 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-// @font-face {
-//   font-family: Roboto;
-//   src: url('/public/fonts/Roboto-Regular.woff2') format("woff2");
-//   font-weight: 400;
-//   font-display: swap;
-//   font-style: normal;
-// }
-
-// @font-face {
-//   font-family: Roboto;
-//   src: url('/public/fonts/Roboto-Medium.woff2') format("woff2");
-//   font-weight: 500;
-//   font-display: swap;
-//   font-style: normal;
-// }
-
-// @font-face {
-//   font-family: Roboto;
-//   src: url('/public/fonts/Roboto-Bold.woff2') format("woff2");
-//   font-weight: 700;
-//   font-display: swap;
-//   font-style: normal;
-// }
-
-// @font-face {
-//   font-family: Roboto;
-//   src: url('/public/fonts/Roboto-Black.woff2') format("woff2");
-//   font-weight: 900;
-//   font-display: swap;
-//   font-style: normal;
-// }
-
 :root {
   --background: white;
   --foreground: black;
@@ -53,15 +21,17 @@ body {
   padding: 0;
   margin: 0;
   font-family: "Roboto", sans-serif;
-  transition: all .2s linear;
+  transition: all 0.2s linear;
 }
 
 a {
   color: inherit;
   text-decoration: none;
-  transition: color .2s ease-in-out;
+  transition: color 0.2s ease-in-out;
 
-  
+  &:hover {
+    color: #36d57f;
+  }
 }
 
 * {
@@ -79,25 +49,9 @@ img {
   object-fit: cover;
 }
 
-main{
+main {
   padding: 20px 0;
 }
-
-/* @media (prefers-color-scheme: dark) {
-  div.dark {
-    --text: #ffffff;
-    --text2: #eeeeee;
-    --bg2: #333333;
-    --bg: #000000;
-  }
-  div.light {
-    --text: #000000;
-    --text2: #333333;
-    --bg2: #eeeeee;
-    --bg: #ffffff;
-  }
-} */
-
 
 ::-webkit-scrollbar {
   width: 5px;
@@ -105,7 +59,6 @@ main{
 
 ::-webkit-scrollbar-track {
   background-color: transparent;
-
 }
 
 ::-webkit-scrollbar-thumb {

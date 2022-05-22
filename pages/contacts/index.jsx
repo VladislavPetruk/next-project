@@ -2,8 +2,9 @@ import React from "react";
 import Container from "../../components/Container";
 import Title from "../../components/Title";
 import { GoogleMap, useJsApiLoader } from "@react-google-maps/api";
-import {BsFillPersonFill, BsTelegram} from "react-icons/bs";
-import {MdPlace, MdEmail} from "react-icons/md"
+import { BsFillPersonFill, BsTelegram } from "react-icons/bs";
+import { MdPlace, MdEmail } from "react-icons/md";
+import Head from "next/head";
 
 const containerStyle = {
   width: "100%",
@@ -17,30 +18,34 @@ const center = {
 
 const media = [
   {
-    "id": "1",
-    "title": "Phone number",
-    "value": <a href="tel:+380678805105">+380678805105</a>,
-    "icon": <BsFillPersonFill className="text-4xl" />
+    id: "1",
+    title: "Phone number",
+    value: <a href="tel:+380678805105">+380678805105</a>,
+    icon: <BsFillPersonFill className="text-4xl" />,
   },
   {
-    "id": "2",
-    "title": "Telegram",
-    "value": <a href="https://t.me/Vlad_petruk">Vladyslav Petruk</a>,
-    "icon": <BsTelegram className="text-4xl" />
+    id: "2",
+    title: "Telegram",
+    value: <a href="https://t.me/Vlad_petruk">Vladyslav Petruk</a>,
+    icon: <BsTelegram className="text-4xl" />,
   },
   {
-    "id": "3",
-    "title": "Email",
-    "value": <a href="mailto:vladiislav.petruk@gmail.com">vladiislav.petruk@gmail.com</a>,
-    "icon": <MdEmail className="text-4xl" />
+    id: "3",
+    title: "Email",
+    value: (
+      <a href="mailto:vladiislav.petruk@gmail.com">
+        vladiislav.petruk@gmail.com
+      </a>
+    ),
+    icon: <MdEmail className="text-4xl" />,
   },
   {
-    "id": "4",
-    "title": "Address",
-    "value": "Kyiv, Ukraine",
-    "icon": <MdPlace className="text-4xl" />
+    id: "4",
+    title: "Address",
+    value: "Kyiv, Ukraine",
+    icon: <MdPlace className="text-4xl" />,
   },
-]
+];
 
 const Contacts = () => {
   const { isLoaded } = useJsApiLoader({
@@ -62,6 +67,13 @@ const Contacts = () => {
 
   return isLoaded ? (
     <section>
+      <Head>
+        <title>Contacts</title>
+        <meta name="description" content="Vladyslav's Contacts" />
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta itemProp="name" content="Contacts" />
+        <meta itemProp="description" content="Vladyslav's Contacts" />
+      </Head>
       <Container>
         <Title text="Contact me" smallText="Get in touch" />
         <div className="grid items-center grid-cols-none md:grid-cols-2 gap-14">
@@ -71,11 +83,13 @@ const Contacts = () => {
               out the form below and I will answer within 1-2 days
             </p>
             <ul>
-              {media.map(({id, title, value, icon}) => (
+              {media.map(({ id, title, value, icon }) => (
                 <li key={id} className="flex items-center py-3 gap-7">
                   {icon}
                   <div className="flex flex-col items-start">
-                    <span className="text-xl font-semibold uppercase">{title}</span>
+                    <span className="text-xl font-semibold uppercase">
+                      {title}
+                    </span>
                     <span className="text-lg font-medium">{value}</span>
                   </div>
                 </li>

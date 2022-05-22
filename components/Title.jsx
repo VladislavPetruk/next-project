@@ -6,8 +6,12 @@ const Title = ({ tag, smallTag, text, smallText }) => {
 
   return (
     <div className="mb-20">
-      <Tag className="mb-2 text-4xl font-medium text-center uppercase">{text}</Tag>
-      <SmallTag className="text-xl font-medium text-center uppercase text-main-color">{smallText}</SmallTag>
+      <Tag className="mb-2 text-4xl font-medium text-center uppercase">
+        {text}
+      </Tag>
+      <SmallTag className="text-xl font-medium text-center uppercase text-main-color">
+        {smallText}
+      </SmallTag>
     </div>
   );
 };
